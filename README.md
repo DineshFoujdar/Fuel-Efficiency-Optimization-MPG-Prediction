@@ -1,4 +1,4 @@
-Predicting Fuel Efficiency of Vehicles:
+# Predicting Fuel Efficiency of Vehicles:
 In this series, we'd be going from data collection to deploying the Machine Learning model:
 
 Data Collection - we are using the classic Auto MPG dataset from UCI ML Repository, I have already collected data and stored it in auto-mpg.data .
@@ -10,7 +10,7 @@ Hyperparameter Tuning - Fine tune the hyperparameters for the models that showed
 Saving Model: Using Pickle module we save our model.
 Whole code is divided into two notebooks EDA.ipynb and model_prediction.ipynb. As, the name suggests , first notebook contains all the analysis of data required to make an idea and same is used in other notebook to build a model.
 
-Problem Statement:
+# Problem Statement:
 Data contains MPG variable which is continuous data and tells us about the efficiency of fuel consumption of a vehicle. Our aim here is to predict the MPG value for a vehicle given we have other attributes.
 
 In two different notebooks total solution is completed first is for EDA and second for Modelling.
@@ -47,7 +47,7 @@ corr_matrix= data.corr()
 corr_matrix['MPG'].sort_values(ascending=False)]
  Here we observe that two new features have strong effect on the target i.e acc_cylinder and acc_power. For same reason it is advisable to create new features and check their relationship with target so we can obtain more information about data.
 
-Second Notebook
+# Second Notebook
 Selecting and training models
 
 Select and train a few algorithms.
@@ -57,13 +57,13 @@ Hyperparameter Tuning
 Check Feature Importance
 Evaluate final model
 Save the model
-We have created two pipelines:
+# We have created two pipelines:
 
 numeric_pipeline:Function to process numerical transformations Argument: data->original dataframe. Returns: num_attrs-> numerical dataframe num_pipeline->numerical pipeline object
 
 data_pipeline: Complete transformation pipeline for both numerical and categorical data. Argument: data-> original dataframe Returns: prepared_data-> transformed data, ready to use
 
-Traning Models:
+# Traning Models:
 Linear Regression  Through linear regression we get mean squared error of 2.95 which is good but still we make decision after comparing it with other models.
 Decision Tree  Although the error has reduced but still we will go with one more model and compare the performance
 Random Forest  Here error which we received is 0 but no model can be perfect. This means overfitting has occured. Because of similar scenario, we don't touch our test data until we are sure of the efficiency of our model.
@@ -74,7 +74,7 @@ Result is an array containing the K evaluation scores. Result of all three model
 
 As we can see that RandomForestRegressor provides us with the minimum error so we will continue with the same.
 
-Hyperparameter Tuning using GridSearchCV
+# Hyperparameter Tuning using GridSearchCV
 Hyperparameters are parameters that are not directly learnt with the model. It is possible and recommended to search the hyper-parameter space or best cross validation score. The grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid
 
 To find the names and current values for all parameters for a given estimator use:
