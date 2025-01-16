@@ -13,8 +13,6 @@ Before you begin, ensure you have the following dependencies installed:
 ## Python 3.x
 Jupyter Notebook (optional, for running the provided notebooks)
 Required Python libraries: NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn
-Installation
-Clone the repository to your local machine: git clone https://github.com/OpenGenus/fuel-efficiency.git
 
 Install the required Python libraries:
 pip install numpy pandas scikit-learn matplotlib seaborn
